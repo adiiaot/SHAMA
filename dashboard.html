@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Assets/images/shama logo.png" type="image/x-icon">
+    <!-------BOXICONS CDN--------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!---------STYLESHEET LIK------>
+    <link rel="stylesheet" href="/Assets/css/style.css">
+    <title>Dashboard</title>
+
+    <!-----------LINE GRAPH------>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/Assets/js/Chart DATA/Linegraph.js"></script>
+
+
+    <!--------SALES GRAPH FOR MONTH-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/Assets/js/Chart DATA/salesgraph.js"></script>
+    
+    <!--------STOCK CHART----->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/Assets/js/Chart DATA/stockgraph.js"></script>
+
+    <!-----PIE CHART---->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/Assets/js/Chart DATA/profitandloss.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <!-----------ASIDE------------->
+        <aside>
+            <div class="top">
+
+                <div class="logo">
+                    <h2>SHA<span class="warning">MA</span><small class="text-muted"> software Technologies</small></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <!----------SIDEBAR/ NAVIGATION---------->
+            <div class="sidebar">
+                <!----LINK ALL # to their specific pages during 
+                routing-->
+                <a href="#" class="active">
+                    <i class='bx bxs-dashboard' ></i>
+                    <h3>Dashboard</h3>
+                </a>  
+
+                <a href="#">
+                    <i class='bx bx-spreadsheet'></i>
+                    <h3>Transactions</h3>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-file'></i>
+                    <h3>Payroll</h3>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-line-chart-down'></i>
+                    <h3>Reporting</h3>
+                </a>
+
+                <a href="#">
+                    <i class='bx bxs-crown'></i>
+                    <h3>Records</h3>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-cog bx-flashing' ></i>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <h3>Profile</h3>
+                </a>
+
+               <a href="#">
+                    <i class='bx bx-log-out-circle'></i>
+                    <h3>Log Out</h3>
+                </a>
+
+            </div>
+        </aside>
+        <!---------END OF ASIDE--------->
+
+        <!------------MIDDLE ------------>
+        <main>
+            <!----------TOP -------->
+            <h1>DASHBOARD</h1>
+            <div class="date">
+                <!---DISPLAY DIFFERENT AMOUNT IN THE DASHBOARD
+                FOR TOTAL AMOUNT, TOTAL INCOME AND TOTAL EXPENSE
+            -->
+                <input type="date" id="date">
+            </div>
+
+                <!---------INSIGHTS------->
+            <div class="insights">
+                <!----------BOX---------->
+                <div class="sales">
+                    <i class='bx bx-bar-chart-alt'></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Amount</h3>
+                            <h1>$20,023</h1>
+                        </div>
+                        
+                        <div class="progress" id="progress">
+                           <!-- <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>-->
+                            <div class="number">
+                                <p id="percent">81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted" id="small">Last 24 Hours</small>
+                </div>
+                <!-----------------END OF SALES---------->
+                
+                <!-----------INCOME BOX--------->
+                <div class="income">
+                    <i class='bx bx-line-chart'></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Income</h3>
+                            <h1>$25,023</h1>
+                        </div>
+                        <div class="progress">
+                           <!--- <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>-->
+                            <div class="number">
+                                <p>45%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!--------------END OF INCOME BOX----->
+
+                <!-----------EXPENSE BOX---------->
+                <div class="expense">
+                    <i class='bx bx-line-chart-down'></i>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Expense</h3>
+                            <h1>$15,020</h1>
+                        </div>
+                        <div class="progress">
+                           <!--- <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>-->
+                            <div class="number">
+                                <p>21%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!------------END OF EXPENSE BOX------->
+            </div>
+
+            <!-------------CASH FLOW TABLE------------>
+            <div class="cash-flows">
+                <h2>CASH FLOWS</h2>
+                <table>
+                    <!-------TABLE HEADING------->
+                    <thead>
+                        <tr>
+                            <!--------TABLE HEAD ROW---->
+                            <th>Banks</th>
+                            <th>Account NO</th>
+                            <th>Opening Balance</th>
+                            <th>MTD-Deposit</th>
+                            <th>MTD-Payment</th>
+                            <th>Closing Balance</th>
+                        </tr>
+                    </thead>
+                    <!-------TABLE BODY------->
+                    <tbody>
+                     
+                </table>
+                <a href="#" class="show-link">Show All</a>
+            </div>
+
+
+            <!-------------SALES/RECEIVABLE TABLE------------>
+            <div class="cash-flows">
+                <h2>SALES/RECEIVABLE</h2>
+                <table>
+                    <!-------TABLE HEADING------->
+                    <thead>
+                        <tr>
+                            <!--------TABLE HEAD ROW---->
+                            <th>Proforma</th>
+                            <th><input type="month" name="" id="month">Number</th>
+                            <th>Amount</th>
+                            <th><input type="date" name="" id="year">Number</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <!-------TABLE BODY------->
+                    <tbody>
+                        <tr>
+                            <td>Invoices Used</td>
+                        </tr>
+                        <tr>
+                            <td>Outstanding Invoices</td>
+                        </tr>
+                        <tr>
+                            <td>Overdue Invoices</td>
+                        </tr>
+                    </tbody>
+                   </table>
+                <a href="#" class="show-link">Show All</a>
+            </div>
+
+
+            <!-------------INVENTORY TABLE------------>
+            <div class="cash-flows">
+                <h2>INVENTORY</h2>
+                <table>
+                    <!-------TABLE HEADING------->
+                    <thead>
+                        <tr>
+                            <p>STOCK MOVEMENT FOR THE MONTH</p>
+                            <!--------TABLE HEAD ROW---->
+                            <th>Stock Held</th>
+                            <th>Opening Balance</th>
+                            <th>Stock Purchased</th>
+                            <th>Stock Sold</th>
+                            <th>Closing Balance</th>
+                        </tr>
+                    </thead>
+                    <!-------TABLE BODY------->
+                    <tbody>
+                        <tr>
+                            <td>All Stocks</td>
+                            <td>Total-</td>
+                            <td>Total-</td>
+                            <td>Total-</td>
+                            <td>Total-</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks To Watch</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="show-link">Show All</a>
+            </div>
+
+
+            <!-------------ACCOUNT PAYABLE TABLE------------>
+            <div class="cash-flows">
+                <h2>ACCOUNT/PAYABLE</h2>
+                <table>
+                    <!-------TABLE HEADING------->
+                    <thead>
+                        <tr>
+                            <!--------TABLE HEAD ROW---->
+                            <th></th>
+                            <th><input type="month" name="" id="month">Number</th>
+                            <th>Amount</th>
+                            <th><input type="date" name="" id="year">Number</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <!-------TABLE BODY------->
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Outstanding</td>
+                        </tr>
+                        <tr>
+                            <td>Overdue</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="show-link">Show All</a>
+            </div>
+
+            
+            
+        </main>
+        <!-------------END OF MIDDLE --------->
+
+
+        <!---------RIGHT--------->
+        <div class="right">
+
+            <!--------TOP-->
+            <div class="top">
+                <!---MENU ICON-->
+                <button id="menu-btn">
+                    <i class='bx bx-menu'></i>
+                </button>
+
+                <!------LIGHT AND DARK THEME BUTTONS-->
+                <div class="theme-toggle">
+                    <i class='bx bx-sun active'></i>
+                    <i class='bx bx-moon'></i>
+                </div>
+                <div class="settings">
+                    <!----SETTING ICON-->
+                    <a href="#"><i class='bx bx-cog' ></i></a>
+                </div>
+
+                <!-------PROFILE NAVIGATION OF USER-->
+               <!-- <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Ayo</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./Assets/images/profile-1.jpg" alt="Oluwadare Taye Ayo">
+                    </div>
+                </div>-->
+            </div>
+            <!-------END OF TOP------>
+
+            <!---------LINE GRAPH------>
+            <div class="chart">
+                <h2>Monthly/Closing Balance</h2>
+
+                <!------LINE DATA BOX----->
+                 <div id="curve_chart" style="width: 100%; height: 100%"></div>
+                   
+            </div>
+            <!-------END OF LINE GRAPH---->
+
+
+            <!---------SALES ANAYTICS FOR MONTH (YEAR) BAR CHART --------->
+            <div class="chart">
+                <h2>Sales Graph</h2>
+
+                <!------LINE DATA BOX----->
+                <div id="chart_div" style="width: 100%x; height: 100%;"></div>
+            </div>
+            <!------END OF SALES ANALYTICS- CHART------>
+
+              <!---------STOCK ANAYTICS FOR MONTH (YEAR) BAR CHART --------->
+              <div class="chart">
+                <h2>Stock Graph</h2>
+                    <div id="chart_div1" style="width: 100%; height: 100%;"></div>
+                   
+               </div>
+            <!------END OF STOCK ANALYTICS------->
+
+
+              <!---------PIE CHART ANAYTICS  --------->
+              <div class="chart">
+                <h2>Profit and Loss Statement</h2>
+
+                <!------LINE DATA BOX----->
+                
+                    <div id="piechart_3d" style="width: 100%; height: 100%;"></div>
+                  
+               </div>
+            <!------PIE CHART ANALYTICS------->
+
+        </div>
+        <!---------END OF RIGHT------->
+
+    </div>
+</body>
+<script src="/Assets/js/Table DATA/cashflow.js"></script>
+<script src="/Assets/js/Table DATA/sales.js"></script>
+<script src="/Assets/js/Table DATA/inventory.js"></script>
+<script src="/Assets/js/Table DATA/accountpayable.js"></script>
+<script src="Assets/js/main.js"></script>
+</html>
