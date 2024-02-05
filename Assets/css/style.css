@@ -220,7 +220,7 @@ aside .sidebar a:hover{
 
 /* ---------------MAIN -----------------*/
 main{
-    margin-top: 4.4rem;
+    margin-top: 4.9rem;
 }
 
 main .cash-flows table input[type="date"],
@@ -275,9 +275,11 @@ main .cash-flows a{
 
 /* --------RIGHT/ CHARTS----------*/
 .right{
-    margin-top: -5rem;
+    margin-top: 1.4rem;
 }
-
+.right #curve_chart{
+    margin-top: -6rem;
+}
 .right #chart_div{
     margin-top: -7rem;
 }
@@ -289,7 +291,6 @@ main .cash-flows a{
 .right #piechart_3d{
     margin-top: -6rem;
 }
-
 .right .top{
     display: flex;
     justify-content: center;
