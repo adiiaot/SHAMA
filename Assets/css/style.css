@@ -220,7 +220,7 @@ aside .sidebar a:hover{
 
 /* ---------------MAIN -----------------*/
 main{
-    margin-top: 4.9rem;
+    margin-top: 4rem;
 }
 
 main .cash-flows table input[type="date"],
@@ -231,10 +231,10 @@ main .cash-flows table input[type="month"]
 }
 
 /* ----------CASH FLOW TABLE---------- */
-main div > .cash-flows{
+main .cash-flows{
     margin-top: 2rem;
 }
-main div > .cash-flows h2{
+main .cash-flows h2{
     margin-bottom: 0.8rem;
 }
 
@@ -277,24 +277,13 @@ main .cash-flows a{
 .right{
     margin-top: 1.4rem;
 }
-.right #curve_chart{
-    margin-top: -6rem;
-}
-.right #chart_div{
-    margin-top: -7rem;
-}
-
-.right #chart_div1{
-    margin-top: -9rem;
-}
-
-.right #piechart_3d{
-    margin-top: -6rem;
-}
 .right .top{
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+.right .Graphs .chart{
+    margin-top: 9rem;
 }
 .right .top button{
     display: none;
@@ -359,7 +348,7 @@ main .cash-flows a{
         position: relative;
         left: 50%;
         transform: translate(-50%);
-        margin: 15rem 0 0 8.8rem;
+        margin: 5rem 0 0 8.8rem;
     }
 
     /*  TABLE */
@@ -419,6 +408,7 @@ main .cash-flows a{
     margin-left: 1rem;
    }
 
+
    aside .sidebar h3{
     display: inline;
    }
@@ -439,7 +429,7 @@ main .cash-flows a{
 
    main{
     margin-top: 8rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
    }
 
    main .cash-flows{
@@ -449,7 +439,7 @@ main .cash-flows a{
    }
 
    main .cash-flows table{
-    width: auto;
+    width: 100%;
     margin: 0;
    }
    
@@ -477,6 +467,10 @@ main .cash-flows a{
     width: 4.4rem;
     position: absolute;
     left: 66%;
+   }
+
+   .right .profile .info{
+    display: none;
    }
 
    .right .top button{
